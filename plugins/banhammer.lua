@@ -79,15 +79,6 @@ local function pre_process(msg)
   return msg
 end
 
-
-do local _ = {
-  sudo_users = {
-    198828890,
-	175531746
-  }
-}
-return _
-end
 local function username_id(cb_extra, success, result)
   local get_cmd = cb_extra.get_cmd
   local receiver = cb_extra.receiver
@@ -128,7 +119,7 @@ local function username_id(cb_extra, success, result)
   return send_large_msg(receiver, text)
 end
 local function run(msg, matches)
- if matches[1]:lower() == 'id' or matches[1]:lower() == 'res' then
+ if matches[1]:lower() == 'id' then
     if msg.to.type == "user" then
       return "Bot ID: "..msg.to.id.. "\n\nYour ID: "..msg.from.id
     end
@@ -350,10 +341,8 @@ return {
     "%[(audio)%]",
     "%[(document)%]",
     "%[(photo)%]",
-    "^😡$",
-    "([Rr]es)$",
+    "^😡$"
   },
   run = run,
   pre_process = pre_process
 }
-
