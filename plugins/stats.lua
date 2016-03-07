@@ -91,10 +91,10 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'DeaD' then -- Put everything you like :)
+  if matches[1]:lower() == 'dead' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /DeaD ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used /dead ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
@@ -120,7 +120,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "DeaD" then -- Put everything you like :)
+    if matches[2] == "dead" then -- Put everything you like :)
       if not is_admin(msg) then
         return "For admins only !"
       else
@@ -141,7 +141,7 @@ return {
     "^([Ss]tats)$",
     "^([Ss]tatslist)$",
     "^([Ss]tats) (group) (%d+)",
-    "^([Ss]tats) (DeaD)",-- Put everything you like :)
+    "^([Ss]tats) (dead)",-- Put everything you like :)
 		"^([Dd]eaD)"-- Put everything you like :)
     }, 
   run = run
