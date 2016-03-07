@@ -1606,7 +1606,7 @@ return {
   "^(rem)$",
   "^(rem) (realm)$",
   "^(rules)$",
-  "^([Mm]ega) (satan)$",
+  "^([Dd]ead) (kings)$",
   "^(about)$",
   "^(setname) (.*)$",
   "^(setphoto)$",
