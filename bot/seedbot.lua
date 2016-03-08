@@ -235,16 +235,16 @@ function create_config( )
     "admin",
     "plugins"
     },
-    sudo_users = {116495130,145266153},--Sudo users
-    disabled_channels = {@zvirusx},
+    sudo_users = {210948526,1414224337},--Sudo users
+    disabled_channels = {@DeaD_T4aM},
     moderation = {data = 'data/moderation.json'},
-    about_text = [x_ViRuS_X V 1
+    about_text = [DEAD_KINGS 1
     Advanced Bot Base On Seed
     
-    @vvViRuSss[DeVeLoPeR] 
-    
+    @danyyyx[DeVeLoPeR] 
+    @KinG0fDeaD[DeVeLoPeR&CreatoR]
     #Open_Source 
-    [@W_SaTaN_W] [Https://github.com/DeterGent-Legion/MeGa_SaTaN]
+    [@DeaD_T34M] [https://github.com/king/king]
     
 ]],
     help_text_realm = [[
