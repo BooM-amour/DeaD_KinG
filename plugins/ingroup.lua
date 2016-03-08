@@ -1247,9 +1247,6 @@ local function run(msg, matches)
       		lock_group_badw(msg, data, target),
       		lock_group_bots(msg, data, target),
       		lock_group_link(msg, data, target),
-      		locl_group_chat(msg, data, target),
-      		lock_group_emoji(msg, data, target),
-      		
       	}
       	return safemode
       end
@@ -1297,14 +1294,6 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked bots ")
         return lock_group_bots(msg, data, target)
       end
-        if matches[2] == 'chat' then
-      	savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked chat ")
-      	return lock_group_chat(msg, data, target)
-      end
-      if matches[2] == 'emoji' then
-      	savelog(msg.to.id, name_log.." ["..msg.from.is.."] locked emoji ")
-      	return lock_group_emoji(msg, data, target)
-      	end
     end
     if matches[1] == 'unlock' or matches[1] == 'u'  then
       local target = msg.to.id
@@ -1321,8 +1310,6 @@ local function run(msg, matches)
       		unlock_group_badw(msg, data, target),
       		unlock_group_bots(msg, data, target),
       		unlock_group_link(msg, data, target),
-      		unlock_group_chat(msg, data, target),
-      		unlock_group_emoji(msg, data, target),
       	}
       	return de_safemode
       end
@@ -1374,14 +1361,6 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked bots ")
         return unlock_group_bots(msg, data, target)
       end
-      if matches[2] == 'chat' then
-      	savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked chat ")
-      	return unlock_group_chat(msg, data, target)
-      end
-      if matches[2] == 'emoji' then
-      	savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlock emoji ")
-      	return unlock_group_chat(msg, data, target)
-      	end
     end
     if matches[1] == 'settings' then
       local target = msg.to.id
@@ -1459,10 +1438,10 @@ local function run(msg, matches)
       end
     end
     if matches[1] == 'dead' and  matches[2] == 'kings' then
-    	        return "dead_kings \n Advanced Bot Base On Seed\n@KinG0fDeaD[DeVeLoPeR] \n#Open_Source\n\n[@DeaD_T34M](Https://telegra.me/DeaD_T34M)"
+    	        return "DEADs_TEAM \n Advanced Bot Base On Seed\n@KinG0fDeaD[DeVeLoPeR&CreatoR] \n@danyyyx[DeVeLoPeR]\n\n[@DeaD_T34M](Https://telegra.me/DeaD_T34M)"
             end
     if matches[1] == 'megasatan' then
-    	return "dead_kings \n Advanced Bot Base On Seed\n@KinG0fDeaD[DeVeLoPeR] \n#Open_Source\n\n[@DeaD_T34M](Https://telegra.me/DeaD_T34M)"
+    	return "DeaDs_TEAM \n Advanced Bot Base On Seed\n@KinG0fDeaD[DeVeLoPeR&CreatoR] \n@danyyyx[DeVeLoPeR]\n\n[@DeaD_T34M](Https://telegra.me/DeaD_T34M)"
     end
     if matches[1] == 'owner' then
       local group_owner = data[tostring(msg.to.id)]['set_owner']

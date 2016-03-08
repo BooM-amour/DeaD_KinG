@@ -6,26 +6,26 @@ end
 if msg.text == "Hi" then
 	return "Hello honey"
 end
-if msg.text == "Hello" then
-	return "Hi bb"
+if msg.text == "سلام" then
+	return "سلام عزیز دل"
 end
 if msg.text == "hello" then
 	return "Hi honey"
 end
 if msg.text == "Salam" then
-	return "Salam aleykom"
+	return "Salam "
 end
 if msg.text == "salam" then
-	return "va aleykol asalam"
+	return "salam"
 end
-if msg.text == "dany" then
-	return "my DADY"
+if msg.text == "deadking" then
+	return "KINGs of DEAD"
 end
-if msg.text == "Dany" then
-	return "DeaD KING"
+if msg.text == "Deadking" then
+	return "my father?"
 end
-if msg.text == "KING" then
-	return "LORD OF KINGS"
+if msg.text == "DANY" then
+	return "Kheily Radifeh PEDARE MAnE"
 end
 if msg.text == "Security" then
 	return "Yes?"
@@ -34,10 +34,10 @@ if msg.text == "security" then
 	return "What?"
 end
 if msg.text == "bot" then
-	return "WhaT?"
+	return "hum?"
 end
 if msg.text == "Bot" then
-	return "Huuuum?"
+	return "BENALLL HA?"
 end
 if msg.text == "?" then
 	return "Hum??"
@@ -46,7 +46,7 @@ if msg.text == "Bye" then
 	return "Babay"
 end
 if msg.text == "bye" then
-	return "boro bay"
+	return "GO GET SLEEP"
 end
 end
 
@@ -56,8 +56,8 @@ return {
 	patterns = {
 		"^[Hh]i$",
 		"^[Hh]ello$",
-		"^[Dd]any$",
-		"^KING$",
+		"^[Dd]eadking$",
+		"^DANY$",
 		"^[Bb]ot$",
 		"^[Ss]ecurity$",
 		"^[Bb]ye$",

@@ -1,7 +1,7 @@
 do
 
 function run(msg, matches)
-send_contact(get_receiver(msg), "+98666", "DeaD_team", "BOT", ok_cb, false)
+send_contact(get_receiver(msg), "6you LO6SE BABY6", "Error oops", "BOT", ok_cb, false)
 end
 
 return {
